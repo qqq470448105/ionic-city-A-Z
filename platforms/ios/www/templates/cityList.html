@@ -1,0 +1,29 @@
+<ion-view view-title="选择城市" hide-tabs="true">
+  <div class="bar bar-subheader">
+    <div class="select-city-top-input">
+      <input class="city-input" type="text" maxlength="15" ng-model="user.text" ng-keypress="todoSomething($event)" placeholder="输入需要搜索的城市名">
+      <button class="button button-small" ng-click="close()">
+        取消
+      </button>
+    </div>
+  </div>
+  <ion-content class="has-subheader" scroll="false">
+    <ion-scroll delegate-handle="city-handle" direction="y" style="width:100%; height:100%" overflow-scroll="true">
+      <div class="list">
+        <div ng-repeat="(key,value) in cityList track by $index">
+          <div class="item item-divider" id="{{key}}" ng-hide="isShowKeyboard">{{key}}</div>
+          <a class="item" ng-repeat="data in value | filter : user.text" ng-click="selectItem(data)">
+            {{data.name}}市
+          </a>
+        </div>
+      </div>
+    </ion-scroll>
+    <div class="select-city-type-line" ng-class="{true:'select-city-type-line-true',false:''}[isTrueNavBar]" ng-hide="isShowKeyboard"
+      ng-touchmove="touchmove($event)" ng-touchend="touchend()">
+      <p class="letter" ng-repeat="(key,value) in cityList track by $index" ng-class="{selected:selected==key}" ng-click="selectType(key)">{{key}}</p>
+    </div>
+    <div class="select-city-type-circle" ng-show="isShowTypeCircle">
+      {{typeCircle}}
+    </div>
+  </ion-content>
+</ion-view>
