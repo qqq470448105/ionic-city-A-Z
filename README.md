@@ -7,4 +7,4 @@ ionic serve不可滑动，需要运行到模拟器或者设备上方可正常使
 
 
 
-![gif](http://chuantu.biz/t6/128/1509937896x1039280720.gif "DEMO-GIF")
+![gif](http://chuantu.biz/t6/129/1509961184x1039280720.gif "DEMO-GIF")
