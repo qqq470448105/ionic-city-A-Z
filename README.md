@@ -2,4 +2,4 @@
     ionic serve不可滑动，需要运行到模拟器或者设备上方可正常使用
 
 #### 效果
-![gif](http://m.qilong.com/Public/newmobile/default/Images/city.gif "DEMO-GIF")
+![gif]( http://m.qilong.com/Public/newmobile/default/Images/city.gif "DEMO-GIF")
